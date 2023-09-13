@@ -1,0 +1,137 @@
+.header {
+  display: flex;
+  color: black;
+  margin-top: 5px;
+  height: fit-content;
+}
+h1 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header2 {
+  text-align: center;
+  top: 10px;
+}
+img {
+  height: 0;
+  display: block;
+}
+img:first-child {
+  height: 200px;
+  top: 0px;
+  right: 50px;
+}
+img:not(:first-child) {
+  height: 200px;
+  position: absolute;
+  top: 15px;
+  right: 50px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 10px;
+  overflow: hidden;
+
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  line-height: 10px;
+  color: black;
+  font-weight: 700;
+}
+nav {
+  display: flex;
+  font-size: 25px;
+  font-weight: 300;
+  background-color: black;
+  word-spacing: 20px;
+  line-height: 30px;
+}
+.parent {
+  position: relative;
+}
+.dropdown {
+  display: contents;
+  position: absolute;
+  top: 95%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.dropdown a {
+  display: contents;
+  padding: 12px;
+  color: white;
+}
+.dropdown a:hover {
+  background-color: yellow;
+}
+.dropdown-menu:hover {
+  background: rgb(255, 94, 0);
+  color: white;
+}
+.dropdown-menu:hover + .dropdown {
+  display: contents;
+  animation: scaleup 0.5s ease-in forwards;
+}
+.dropdown:hover {
+  display: contents;
+}
+@keyframes scaleup {
+  0% {
+    transform: rotate(360deg);
+    background-color: green;
+  }
+  70% {
+    transform: rotate(0deg);
+    background-color: yellow;
+  }
+  85% {
+    transform: rotate(-60deg);
+    background-color: brown;
+  }
+  100% {
+    transform: rotate(0deg);
+    background-color: red;
+  }
+}
+.banner {
+  background-color: burlywood;
+  background-image: -moz-element(30%);
+}
+.banner p {
+  font-size: 100px;
+  padding: 50px;
+
+  animation: ourtextscroll 10s linear infinite;
+}
+@keyframes ourtextscroll {
+  0% {
+    transform: translate(100%);
+  }
+  100% {
+    transform: translate(-100%);
+  }
+}
+.photos2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+img {
+  width: 400px;
+}
+.collection {
+  border: none;
+  margin: 10px;
+}
+.footer {
+  background-color: black;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
